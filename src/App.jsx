@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Dice from './Dice'
 import LuckyN from './LuckyN'
+import { sum } from './utils'
+
+function lessThan4(dice) {
+  return sum(dice) <4;
+}
+
+function allSameValue(dice) {
+  return dice.every((v) => v === dice[0])
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-       <LuckyN />
+       <LuckyN winCheck={lessThan4} title="Rol LessThan 4"/>
+       <LuckyN winCheck={allSameValue} title="Roll The Same Number"/>
     </>
   )
 }
