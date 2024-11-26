@@ -1,3 +1,4 @@
+import BoxGrid from './BoxGrid';
 import LuckyN from './LuckyN'
 import { sum } from './utils'
 
@@ -12,8 +13,9 @@ function allSameValue(dice) {
 function App() {
   return (
     <>
-       <LuckyN winCheck={lessThan4} title="Rol LessThan 4"/>
-       <LuckyN winCheck={allSameValue} title="Roll The Same Number"/>
+      <BoxGrid />
+       {/* <LuckyN winCheck={lessThan4} title="Rol LessThan 4"/>
+       <LuckyN winCheck={allSameValue} title="Roll The Same Number"/> */}
     </>
   )
 }
